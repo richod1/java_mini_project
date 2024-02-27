@@ -1,10 +1,10 @@
 const {migrate}=require("./migrate")
 
 const search=async(Model,req,res)=>{
-    const feildArray=req.query.fields?req.query.fields.split(',') :['name'];
+    const fieldArray=req.query.fields?req.query.fields.split(',') :['name'];
     const fields={$or:[]};
 
-    for(const field of feildArray){
+    for(const field of fieldArray){
         fields.$or.push({[field] : {$regex:new RegExp(req.quey.q,'1')}});
     }
 
@@ -27,4 +27,4 @@ const search=async(Model,req,res)=>{
     }
 }
 
-module.exports=search;
+module.exports=search
