@@ -8,7 +8,7 @@ const read=async (Model,req,res)=>{
 
     if(!result){
         return res.status(404).json({
-            success:false,
+            success:false, 
             result:null,
             message:'No document found',
         })
