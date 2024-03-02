@@ -25,4 +25,6 @@ const increaseBySettingKey=async({secretKey})=>{
     }
 };
 
-module.exports=increaseBySettingKey;
+module.exports={
+    increaseBySettingKey,
+}
