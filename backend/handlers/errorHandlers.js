@@ -10,7 +10,7 @@
         return function (req, res, next) {
         return fn(req, res, next).catch((error) => {
             if (error.name == 'ValidationError') {
-            return res.status(400).json({
+                return res.status(400).json({
                 success: false,
                 result: null,
                 message: 'Required fields are not supplied',
