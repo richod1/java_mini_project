@@ -86,6 +86,10 @@
             const attatchedFile = fs.readFileSync(targetLocation);
         
             // Send the mail using the send method
+
+            /**if resend api dont work like the other time when the 
+             * domain fucked off use mailgun wich is easy to intergrate
+             */
             const { data } = await resend.emails.send({
                 from: octa_app_email,
                 to: email,
