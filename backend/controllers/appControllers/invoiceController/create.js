@@ -62,7 +62,7 @@ const create=async(req,res)=>{
         settingKey:'last_invoice_number',
     });
 
-    return status(200).json({
+    return res.status(200).json({
         success:true,
         result:updateResult,
         message:'Invoice created successfully',

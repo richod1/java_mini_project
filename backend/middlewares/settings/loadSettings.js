@@ -10,4 +10,4 @@ const loadSettings=async ()=>{
     return allSettings;
 };
 
-module.exports=loadSettings;
+module.exports={loadSettings};
