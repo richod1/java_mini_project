@@ -18,4 +18,6 @@ function modelController() {
     return methods;
 }
 
-module.exports = modelController();
+module.exports = {
+    modelController,
+};
