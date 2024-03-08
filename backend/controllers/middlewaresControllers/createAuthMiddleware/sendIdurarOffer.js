@@ -15,4 +15,4 @@ const sendIdurarOffer = async ({ email, name }) => {
     return data;
 };
 
-module.exports = sendOctaOffer;
+module.exports = sendIdurarOffer;

@@ -2,7 +2,7 @@
 
     const mongoose = require('mongoose');
 
-    const checkAndCorrectURL = require('./checkAndCorrectURL');
+    const checkAndCorrectURL = require('./chackAndCorrectURL');
     const sendMail = require('./sendMail');
     const shortid = require('shortid');
     const { loadSettings } = require('../../../middlewares/settings/loadSettings');

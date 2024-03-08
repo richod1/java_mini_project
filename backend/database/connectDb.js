@@ -1,5 +1,4 @@
-const mongoose=require(mongoose)
-
+const mongoose=require("mongoose")
 
 const connectDb=()=>{
     mongoose.connect(`${process.env.MONGO_URL}`).then((response)=>{

@@ -1,45 +1,52 @@
-const {extname,basename}=require("node:path")
-const {globSync}=require('glob')
+    const { basename, extname } = require('path');
+    const { globSync } = require('glob');
 
-const appModelFiles=globSync('../appModels/**/*.js');
-const pattern='../../models/**/*.js';
+    // const appModelsFiles = globSync('./src/models/appModels/**/*.js');
+    const appModelsFiles=globSync('./../appModels/**/*.js');
 
-const modelFiles=globSync(pattern).map((filePath)=>{
-    const fileNameWithExtension=basename(filePath);
-    const fileNameWithoutExtension=fileNameWithExtension.replace(extname(fileNameWithExtension),''
-    )
-    return fileNameWithoutExtension;
-});
+    // const pattern = './src/models/**/*.js';
 
-const constrollersList = [];
-const appModelList=[];
-const entityList=[];
-const troutesList=[];
+    const pattern='../../models/**/*.js';
 
-for(const filePath of appModelFiles){
-    const fileNameWithExtension=fileNameWithExtension.replace(
-        extname(),''
+    const modelsFiles = globSync(pattern).map((filePath) => {
+    const fileNameWithExtension = basename(filePath);
+    const fileNameWithoutExtension = fileNameWithExtension.replace(
+        extname(fileNameWithExtension),
+        ''
     );
+    return fileNameWithoutExtension;
+    });
 
-    const firstChar = fileNameWithExtension.charAt(0);
-    const modelName = fileNameWithExtension.replace(firstChar, firstChar.toUpperCase());
-    const fileNameLowerCaseFirstChar = fileNameWithExtension.replace(
+    const constrollersList = [];
+    const appModelsList = [];
+    const entityList = [];
+    const routesList = [];
+
+    for (const filePath of appModelsFiles) {
+    const fileNameWithExtension = basename(filePath);
+    const fileNameWithoutExtension = fileNameWithExtension.replace(
+        extname(fileNameWithExtension),
+        ''
+    );
+    const firstChar = fileNameWithoutExtension.charAt(0);
+    const modelName = fileNameWithoutExtension.replace(firstChar, firstChar.toUpperCase());
+    const fileNameLowerCaseFirstChar = fileNameWithoutExtension.replace(
         firstChar,
         firstChar.toLowerCase()
-        );
-        const entity = fileNameWithExtension.toLowerCase();
-    
-        controllerName = fileNameLowerCaseFirstChar + 'Controller';
-        constrollersList.push(controllerName);
-        appModelList.push(modelName);
-        entityList.push(entity);
-    
-        const route = {
+    );
+    const entity = fileNameWithoutExtension.toLowerCase();
+
+    controllerName = fileNameLowerCaseFirstChar + 'Controller';
+    constrollersList.push(controllerName);
+    appModelsList.push(modelName);
+    entityList.push(entity);
+
+    const route = {
         entity: entity,
         modelName: modelName,
         controllerName: controllerName,
-        };
-        troutesList.push(route);
+    };
+    routesList.push(route);
     }
-    
-    module.exports = { constrollersList, appModelList, modelFiles, entityList, troutesList };
+
+    module.exports = { constrollersList, appModelsList, modelsFiles, entityList, routesList };
