@@ -53,7 +53,7 @@
   {
     "settingCategory": "lead_settings",
     "settingKey": "lead_email_imap_server",
-    "settingValue": "mail.idurarapp.com",
+    "settingValue": "mail.IDURARapp.com",
     "valueType": "string",
 
     "isPrivate": true
@@ -61,7 +61,7 @@
   {
     "settingCategory": "lead_settings",
     "settingKey": "lead_email_imap_username",
-    "settingValue": "hello@idurarapp.com",
+    "settingValue": "hello@IDURARapp.com",
     "valueType": "string",
 
     "isPrivate": true

@@ -64,11 +64,11 @@ const setup = async (req, res) => {
     const file = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
 
     const settingsToUpdate = {
-      idurar_app_email: email,
-      idurar_app_company_email: email,
-      idurar_app_timezone: timezone,
-      idurar_app_country: country,
-      idurar_app_language: language || 'en_us',
+      IDURAR_app_email: email,
+      IDURAR_app_company_email: email,
+      IDURAR_app_timezone: timezone,
+      IDURAR_app_country: country,
+      IDURAR_app_language: language || 'en_us',
     };
 
     const newSettings = file.map((x) => {

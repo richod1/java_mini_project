@@ -76,18 +76,18 @@ const sendViaApi = async ({ email, name, targetLocation }) => {
     const resend = new Resend(process.env.RESEND_API);
 
     const settings = await loadSettings();
-    const idurar_app_email = 'noreply@idurarapp.com';
-    const idurar_app_company_email = settings['idurar_app_company_email'];
+    const IDURAR_app_email = 'noreply@IDURARapp.com';
+    const IDURAR_app_company_email = settings['IDURAR_app_company_email'];
     const company_name = settings['company_name'];
     // Read the file to be attatched
     const attatchedFile = fs.readFileSync(targetLocation);
 
     // Send the mail using the send method
     const { data } = await resend.emails.send({
-      from: idurar_app_email,
+      from: IDURAR_app_email,
       to: email,
       subject: 'Invoice From ' + company_name,
-      reply_to: idurar_app_company_email,
+      reply_to: IDURAR_app_company_email,
       attachments: [
         {
           filename: 'Invoice.pdf',

@@ -18,9 +18,9 @@ async function setupApp() {
     const passwordHash = newAdminPassword.generateHash(salt, 'admin123');
 
     const demoAdmin = {
-      email: 'admin@demo.com',
-      name: 'IDURAR',
-      surname: 'Admin',
+      email: 'frimpsoft@frimp.com',
+      name: 'Degraft',
+      surname: 'Frimpong',
       enabled: true,
       role: 'owner',
     };

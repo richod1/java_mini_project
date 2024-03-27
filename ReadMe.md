@@ -1,4 +1,6 @@
-Features :
+# Integrated Data Unified Resource and Analytics Repository (IDURAR)
+
+# Features :
 Invoice Management 💰
 
 Inventory Management 🧳

@@ -2,13 +2,13 @@
   {
     "settingCategory": "email_settings",
     "settingKey": "email_domain",
-    "settingValue": "idurarapp.com",
+    "settingValue": "IDURARapp.com",
     "valueType": "string"
   },
   {
     "settingCategory": "email_settings",
     "settingKey": "email_reply_to",
-    "settingValue": "reply@idurarapp.com",
+    "settingValue": "reply@IDURARapp.com",
     "valueType": "string"
   },
   {
