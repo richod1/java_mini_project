@@ -15,11 +15,7 @@ if (major < 20) {
 require('dotenv').config({ path: '.env' });
 require('dotenv').config({ path: '.env.local' });
 
-mongoose.connect(`${process.env.DATABASE}`).then(()=>{
-  console.log("Database connected successfully")
-}).catch((err)=>{
-  console.log(`Database failed ${err}`)
-})
+
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
@@ -45,7 +41,14 @@ app.get("/api/test",(req,res)=>{
 })
 
 
-app.listen(port,(err)=>{
-  if(err) throw new Error("server is asleep")
-  console.log(`server is up on port :${port}`)
+mongoose.connect(`${process.env.DATABASE}`).then(()=>{
+  console.log("Database connected successfully")
+
+  app.listen(port,(err)=>{
+    if(err) throw new Error("server is asleep")
+    console.log(`server is up on port :${port}`)
+  })
+}).catch((err)=>{
+  console.log(`Database failed ${err}`)
 })
+
