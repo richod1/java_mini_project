@@ -1,6 +1,6 @@
 {
   "name": "IDURAR-erp-crm",
-  "version": "4.0.0-beta.1",
+  "version": "1.0.0-beta.1",
   "engines": {
     "npm": "10.2.4",
     "node": "20.9.0"
@@ -48,15 +48,15 @@
     "@": "src"
   },
   "main": "server.js",
-  "author": "IDURAR",
-  "email": "hello@IDURARapp.com",
+  "author": "Degraft Frimpong",
+  "email": "frimpsup@gmail.com",
   "license": "Fair-code License",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IDURAR/IDURAR-erp-crm/.git"
+    "url": "git+https://github.com/richod1/java_mini_project/.git"
   },
   "bugs": {
-    "url": "https://github.com/IDURAR/IDURAR-erp-crm//issues"
+    "url": "https://github.com/richod1/java_mini_project/issues"
   },
-  "homepage": "https://github.com/IDURAR/IDURAR-erp-crm/#readme"
+  "homepage": "https://github.com/richod1/java_mini_project/#readme"
 }
