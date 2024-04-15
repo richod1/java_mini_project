@@ -19,12 +19,7 @@ require('dotenv').config({ path: '.env.local' });
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
-// mongoose.connection.on('error', (error) => {
-//   console.log(
-//     `1. 🔥 Common Error caused issue → : check your .env file first and add your mongodb url`
-//   );
-//   console.error(`2. 🚫 Error → : ${error.message}`);
-// });
+
 
 const modelsFiles = globSync('./src/models/**/*.js');
 

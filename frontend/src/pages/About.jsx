@@ -12,18 +12,18 @@ const About = () => {
       extra={
         <>
           <p>
-            Website : <a href="https://www.IDURARapp.com">www.IDURARapp.com</a>{' '}
+            Website : <a href="https://www.frimpSoft.com">www.frimpSoft.com</a>{' '}
           </p>
           <p>
             GitHub :{' '}
-            <a href="https://github.com/IDURAR/IDURAR-erp-crm">
-              https://github.com/IDURAR/IDURAR-erp-crm
+            <a href="https://github.com/richod1/java_mini_project">
+              https://github.com/richod1/java_min_project
             </a>
           </p>
           <Button
             type="primary"
             onClick={() => {
-              window.open(`https://www.IDURARapp.com/contact-us/`);
+              window.open(`https://www.frimpSoft.com/contact-us/`);
             }}
           >
             {translate('Contact us')}

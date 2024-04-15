@@ -2,6 +2,8 @@ const jwt = require('jsonwebtoken');
 
 const mongoose = require('mongoose');
 
+// const JWT_SECRET=`${process.env.JWT_SECRET}`
+
 const isValidAuthToken = async (req, res, next, { userModel, jwtSecret = 'JWT_SECRET' }) => {
   try {
     const UserPassword = mongoose.model(userModel + 'Password');
